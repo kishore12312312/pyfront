@@ -10,14 +10,14 @@ export default function ListUserPage(){
     }, []);
   
     function getUsers() {
-        axios.get('http://127.0.0.1:5000/listusers').then(function(response) {
+        axios.get('https://pythonbackendapp.azurewebsites.net/listusers').then(function(response) {
             console.log(response.data);
             setUsers(response.data);
         });
     }
      
     const deleteUser = (id) => {
-        axios.delete(`http://127.0.0.1:5000/userdelete/${id}`).then(function(response){
+        axios.delete(`https://pythonbackendapp.azurewebsites.net/userdelete/${id}`).then(function(response){
             console.log(response.data);
             getUsers();
         });

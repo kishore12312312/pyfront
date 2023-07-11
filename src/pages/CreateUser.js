@@ -16,7 +16,7 @@ export default function CreateUser(){
     const handleSubmit = (event) => {
         event.preventDefault();
   
-        axios.post('http://127.0.0.1:5000/useradd', inputs).then(function(response){
+        axios.post('https://pythonbackendapp.azurewebsites.net/useradd', inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });

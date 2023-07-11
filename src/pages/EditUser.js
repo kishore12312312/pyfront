@@ -15,7 +15,7 @@ export default function EditUser(){
     }, []);
   
     function getUser() {
-        axios.get(`http://127.0.0.1:5000/userdetails/${id}`).then(function(response) {
+        axios.get(`https://pythonbackendapp.azurewebsites.net/userdetails/${id}`).then(function(response) {
             console.log(response.data);
             setInputs(response.data);
         });
@@ -29,7 +29,7 @@ export default function EditUser(){
     const handleSubmit = (event) => {
         event.preventDefault();
   
-        axios.put(`http://127.0.0.1:5000/userupdate/${id}`, inputs).then(function(response){
+        axios.put(`https://pythonbackendapp.azurewebsites.net/userupdate/${id}`, inputs).then(function(response){
             console.log(response.data);
             navigate('/');
         });
